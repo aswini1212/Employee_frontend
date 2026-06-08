@@ -4,7 +4,7 @@ import '/Login.css'
 import KVLogo from "../assets/keyvalue_logo.png"
 import FrameImage from "../assets/Frame1.png"
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function Login() {
 
@@ -13,6 +13,9 @@ function Login() {
   const [usernameError, setUsernameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const navigate=useNavigate()
+  const ref=useRef(null)
+ 
+
   function handleSubmit(e:React.SubmitEvent<HTMLFormElement>)
   {
     // GETTING USER AND CHECKING FROM LOCAL STORAGE
@@ -54,6 +57,16 @@ function Login() {
       setPasswordError("")
     }
   }
+  //USING USEREF TO FOCUS THE INPUTS WHEN THE PAGE LOADS
+  useEffect(()=>{
+    ref.current?.focus();
+    
+  },[])
+
+
+
+  
+  // throw new Error("Error has been thrown from login page")
   return (
 
       <div className="parent_container"> 
@@ -69,10 +82,10 @@ function Login() {
             
               <div className="form_div_log">
                   <form className="form" onSubmit={handleSubmit}>
-                    <input type="text" name="username" placeholder="UserName" className="username" onChange={(e)=>handleUsername(e.target.value)}/>
+                    <input type="text" name="username" placeholder="UserName" className="username" onChange={(e)=>handleUsername(e.target.value) }  ref={ref}/>
                     {usernameError && <p className="validation_para">{usernameError}</p>}
 
-                    <input type="text" name="password" placeholder="Password" className="password" onChange={(e)=>handlePassword(e.target.value)} />
+                    <input type="Password" name="password" placeholder="Password" className="password" onChange={(e)=>handlePassword(e.target.value)} />
                     {passwordError && <p className="validation_para">{passwordError}</p>}
 
                     <button type="submit" id="login-button">Login</button>

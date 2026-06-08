@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+.upload_box_main
+{
+    display:flex;
+    flex-direction:column;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    width:600px;
+    /* height:400px; */
+    border:1px solid #63667A;
+    padding:20px;
+    position:absolute;
+    top:40%;
+    left:40%;
+}
+.upload_header
+{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:10px;
+    font-family: Nunito;
+    width:500px;
+}
+.cross_button
+{
+    width:24px;
+    height: 24px;
+    background-color: white;
+    border:none;
+}
+.drag-drop
+{
+    border-width: 3px;
+    border-style: dashed;
+    background-color: white;
+    border-color: #183072;
+    border-radius: 16px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    gap:24px;
+    width:500px;
+    height:300px;
+    margin-top:15px;
+    margin-left:3px;
+    margin-right:3px;
+    margin-bottom:15px;
+    padding:10px;
+}
+.drag_drop
+{
+    width:90px;
+    height:65px;
+}
+.para_up_one
+{
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: bold;
+    font-weight: 700;
+    color:#03AEEE
+
+}
+.para_up_two
+{
+    font-family: Nunito;
+    font-weight: 400;
+    font-size: 14px;
+    color: #183072;
+
+}
+.up_div
+{
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+    
+}
+.up_div p{
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: bold;
+    font-weight: 700;
+    color:#03AEEE
+}
+.up_button_div
+{
+    display:flex;
+    flex-direction:row;
+    flex:1;
+    gap:8px;
+}
+.up_cancel
+{
+    border:1px solid #63667A;
+    color:#63667A;
+    border-radius: 8px;
+    width:250px;
+    height:50px;
+}
+.up_upload
+{
+    color:white;
+    border:none;
+    background-color: #03AEEE;
+    border-radius: 8px;
+    width:250px;
+    height:50px;
+
+}
+.upload_header button{
+    width:24px;
+    height:24px;
+}
+.up_div img
+{
+    width:20px;
+    height:20px;
+    margin-top: 3px;
+}

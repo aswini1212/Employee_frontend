@@ -6,6 +6,8 @@ import attachIcon from "../assets/attach_icon.png"
 import { useLocation, useParams } from 'react-router-dom'
 import { employees } from "../models/employees"
 import '/create_employee.css'
+import { useState } from 'react'
+import UploadBox from '../components/upload_box'
 
 
 function CreateEmployee()
@@ -26,7 +28,11 @@ function CreateEmployee()
     const city= path==="/employee/create"? "":employee?.city || ""
     const country= path==="/employee/create"? "":employee?.country || ""
     const postal_code= path==="/employee/create"? "":employee?.postalCode || ""
+    const role= path==="/employee/create"? "":employee?.role || ""
+    const status= path==="/employee/create"? "":employee?.status|| ""
 
+    //To DISPLAY THE UPLOAD BOX
+    const[uploadbox,setUploadBox]=useState(false)
 
 
     // VALIDATING THE FORM--UNCONTROLLED
@@ -61,6 +67,10 @@ function CreateEmployee()
             return;
         }
     }
+    function handleUpload()
+    {
+        setUploadBox((uploadbox)=>!uploadbox)
+    }
 
     return(
         <>
@@ -82,7 +92,7 @@ function CreateEmployee()
                         <div className="input_row">
                             <div className="group1">
                                 <Label htmlFor="role" value="Role:"/>
-                                <select id="roles" >
+                                <select id="roles" defaultValue={role} >
                                     <option >Software Engineer</option>
                                     <option >Product Manager</option>
                                     <option >Designer</option>
@@ -91,7 +101,7 @@ function CreateEmployee()
                             
                             <div className="group1">
                                 <Label htmlFor="status" value="Status:"/>
-                                <select id="statuses" >
+                                <select id="statuses" defaultValue={status}>
                                     <option>Active</option>
                                     <option >Inactive</option>
                                     <option>Probation</option>
@@ -117,8 +127,8 @@ function CreateEmployee()
 
                             <div className="uploadid">
                                 <Label htmlFor="uploadid" value="Upload ID Proof"/>
-                                <Input type="file" id="uploadid" name="uploadid" className="upload_input" placeholder="Attach Files"/>
-                                <div className="id_div"><img src={attachIcon}/>Attach Files</div>
+                                {/* <Input type="file" id="uploadid" name="uploadid" className="upload_input" placeholder="Attach Files"/> */}
+                                <div className="id_div" onClick={handleUpload}><img src={attachIcon}/>Attach Files</div>
                             </div>
                         </div>
 
@@ -126,7 +136,7 @@ function CreateEmployee()
                             <Button type="submit" label="CreateEmployee" id="create"/>
                             <Button type="button" label="Cancel" id="cancel"/>  
                         </div>  
-                        
+                        {uploadbox && <UploadBox onCancel={() => setUploadBox(false)}/>}
                     </form>
                 </div>
                 </>

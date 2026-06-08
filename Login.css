@@ -71,6 +71,14 @@ input{
     font-weight: 600;
     line-height: 100%;
 }
+.username:focus{
+    outline:none;
+    border: 3px solid #03AEEE;
+}
+.password:focus{
+    outline:none;
+    border: 3px solid #03AEEE;
+}
 .username{
     padding-left:8px;
 }
