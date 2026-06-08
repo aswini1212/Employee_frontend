@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;700;800;900&display=swap');
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+html,body{
+    height:100%;
+}
+.head_div_details
+{
+    background-color:#FFFFFF;
+    flex-direction:row;
+    flex-wrap:wrap;
+    display:flex;
+    padding:32px 40px 32px 40px;
+    gap:24px;
+    align-items: center;
+    width:100%;
+    border-radius: 32px;
+}
+h1{
+    font-family: Nunito;
+    font-weight: 700px;
+    font-size: 24px;
+    line-height: 100%;
+    color:#19202D;
+}
+.main_container
+{
+    background-color:#FFFFFF;
+    flex-direction:column;
+    flex-wrap:wrap;
+    display:flex;
+    padding:32px 40px 32px 40px;
+    gap:24px;
+    width:100%;
+    border-radius: 32px;
+    box-shadow: #8991A1;
+}
+.edit-emp-btn
+{
+    position: absolute;
+    top: 125px;
+    right: 70px; 
+    border: none;
+    background-color: #EAF9FF;
+    border-radius: 40px;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    width:200px;
+}
+.edit-emp-btn span
+{
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #19202D;
+}
+.edit-icon
+{
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+.sub_contain_one
+{
+    display:flex;
+    flex-direction:row;
+}
+.sub_contain_two
+{
+    display:flex;
+    flex-direction:row;
+    gap:50px;
+}
+.label-group
+{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+.p-one{
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    color: #19202D;
+}
+.p-two
+{
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #19202D;
+}
+#Probation {
+    background-color: #FFF3CD;
+    color: #D4A017;
+    padding: 4px 12px;
+    border-radius: 20px;
+    width: 100px;
+}
+
+#Active {
+    background-color: #D4F5E2;
+    color: #0F9D58;
+    padding: 4px 12px;
+    border-radius: 20px;
+    width: 100px;
+}
+
+#Inactive {
+    background-color: #FFD6DD;
+    color: #E53935;
+    padding: 4px 12px;
+    border-radius: 20px;
+    width: 100px;
+}
+.address_div
+{
+    width:750px;
+    display:flex;
+    flex-direction:column;
+
+}
+

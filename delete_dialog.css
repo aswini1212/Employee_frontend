@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+.delete_dialog
+{
+    width:500px;
+    height:250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1;
+    position:absolute;
+    top:40%;
+    left:40%;
+}
+.delete_dialog h3
+{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #121212;
+    text-align: center;
+}
+.delete_dialog p
+{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #474748;
+    text-align: center;
+}
+.del_button_div
+{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: 0px 16px;
+}
+#cancel_btn
+{
+    background-color: #EAF9FF;
+    border: 1px solid #63667A;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #63667A;
+    flex:1;
+}
+#confirm_btn
+{
+    background-color: #03AEEE;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    flex:1;
+}
