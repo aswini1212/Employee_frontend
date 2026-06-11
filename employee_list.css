@@ -80,7 +80,7 @@ h1{
     height:20px;
 
 }
-.probation {
+.Probation {
     background-color: #FFF3CD;
     color: #D4A017;
     padding: 4px 12px;
@@ -88,7 +88,7 @@ h1{
     width: auto;
 }
 
-.active {
+.Active {
     background-color: #D4F5E2;
     color: #0F9D58;
     padding: 4px 12px;
@@ -96,7 +96,7 @@ h1{
     width: auto;
 }
 
-.inactive {
+.Inactive {
     background-color: #FFD6DD;
     color: #E53935;
     padding: 4px 12px;
@@ -164,4 +164,13 @@ h1{
 .add-icon {
     width: 40px;
     height: 40px;
+}
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
 }

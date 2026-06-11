@@ -4,7 +4,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    width:100%
+    /* width:100% */
 }
 html,body{
     height:100%;
@@ -150,14 +150,16 @@ h1{
         flex-direction:column;
         gap:6px;
 }
-.address,.uploadid
+.address,.uploadid,.experience
 {
     display:flex;
     flex-direction:column;
     gap:9px;
     position:relative;
-    width:453px;
+    width:100%;
+    flex:1;
 }
+
 .city_con
 {
     display:flex;
@@ -228,23 +230,15 @@ h1{
     width: 60px;
     height: 60px;
 }
-.upload_input
-{
-    display:flex;
-    flex-direction:column;
-    border-width: 1px;
-    opacity:0;
-    position:relative;
-    z-index:1;
-}
+
 .id_div
 {
     display:flex;
     flex-direction:row;
-    position:absolute;
+    /* position:absolute; */
     justify-content:flex-end;
     align-items:center;
-    width:350px;
+    width:100%;
     height:44px;
     border-radius: 4px;
     border-width: 1px;
@@ -254,9 +248,18 @@ h1{
     background-color: #F3F6FA;
     font-family: Nunito;
     color: #63667A;
-    top:30px;
+    /* top:30px; */
 }
 .id_div img{
     width:20px;
     height:20px;
+}
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
 }

@@ -11,6 +11,8 @@ import Loading from './components/loading'
 import React from 'react';
 import Login from './pages/Login_Page';
 import ErrorBoundary from './components/error_boundary';
+import store from './store/store';
+import {Provider} from "react-redux";
 
 // const Page = React.lazy(() => import('./pages/Login_Page'));
 
@@ -19,7 +21,10 @@ function App() {
     // <ErrorBoundary>
     //   <Suspense fallback={<Loading/>}>
     <div className="App">
-      <RouterProvider router={router}/>
+      <Provider store={store}>
+       <RouterProvider router={router}/>
+      </Provider>
+      
     </div>
     // </Suspense>
     // </ErrorBoundary>
