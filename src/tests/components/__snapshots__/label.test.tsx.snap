@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Label component > label should match snapshot 1`] = `
+<div>
+  <label
+    for="test-label"
+  >
+    test-label-value
+  </label>
+</div>
+`;

@@ -1,11 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom'
 import Login from '../pages/Login_Page'
 import CreateEmployee from '../pages/Create_Employee';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import NotFound from '../pages/NotFound'
 import ErrorPage from '../pages/ErrorPage';
 import EmployeeList from '../pages/Employee_List';
-import ProtectedRoute from '../components/protected_route'
+import ProtectedRoute from '../components/ProtectedRoute'
 import UseProfile from '../components/useProfile';
 import EmployeeDetails from '../pages/Employee_Details';
 

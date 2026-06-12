@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Image component > image should match snapshot 1`] = `
+<div>
+  <img
+    src="test-image-src"
+  />
+</div>
+`;

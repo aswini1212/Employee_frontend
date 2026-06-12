@@ -1,5 +1,5 @@
-import EmpListHeader from "../components/emplist";
-import EmpListHeaderContent from "../components/emplist-content";
+import EmpListHeader from "../components/EmpListHeader";
+import EmpListHeaderContent from "../components/EmpListHeaderContent";
 import addIcon from "../assets/add_icon.png"
 import { useNavigate } from "react-router";
 import { useState } from "react";

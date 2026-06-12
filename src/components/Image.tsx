@@ -1,4 +1,4 @@
-function Image(props:{src:string,className:string})
+function Image(props:{src:string,className?:string})
 {
     return(
 

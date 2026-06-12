@@ -15,6 +15,10 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+  //   /*Path alias*/
+  //   "paths":{
+  //   "@components/*":["./src/components/*"]
+  // },
     /* Linting */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -22,4 +26,6 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src"]
+
+  
 }

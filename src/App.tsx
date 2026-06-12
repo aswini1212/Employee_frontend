@@ -7,10 +7,10 @@
 import { RouterProvider } from 'react-router'
 import router from './routes/router'
 import { Suspense } from 'react'
-import Loading from './components/loading'
+import Loading from './components/Loading'
 import React from 'react';
 import Login from './pages/Login_Page';
-import ErrorBoundary from './components/error_boundary';
+import ErrorBoundary from './components/ErrorBoundary';
 import store from './store/store';
 import {Provider} from "react-redux";
 

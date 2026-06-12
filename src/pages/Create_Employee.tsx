@@ -1,11 +1,11 @@
-import Group from '../components/group'
-import Input from '../components/input'
-import Label from '../components/label'
+import Group from '../components/Group'
+import Input from '../components/Input'
+import Label from '../components/Label'
 import attachIcon from "../assets/attach_icon.png"
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import '/create_employee.css'
 import { useEffect, useState } from 'react'
-import UploadBox from '../components/upload_box'
+import UploadBox from '../components/UploadBox'
 import { useCreateEmployeeMutation, useGetEmployeesByIdQuery, useUpdateEmployeeMutation } from '../api_service/employees/employees.api'
 
 // enum ROLES {
@@ -121,8 +121,6 @@ async function onSubmit(e: React.SubmitEvent<HTMLFormElement>)
               
     }
     
-    
-   
     function ConvertToObject(name:string,email:string,password:string,role:string,line1:string,city:string,country:string,postal_code:string,status:string,experience:number,age:number)
     {
         return(

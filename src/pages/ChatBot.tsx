@@ -1,6 +1,6 @@
 import MessageIcon from "../assets/message_icon.png"
 import sendIcon from "../assets/send_icon.png"
-import Image from "../components/image"
+import Image from "../components/Image"
 import ChatIcon from "../assets/chat_icon.png"
 import '/chat_bot.css'
 

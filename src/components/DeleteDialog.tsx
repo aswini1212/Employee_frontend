@@ -6,15 +6,17 @@ function DeleteDialog({onCancel,onConfirmDelete,id}:{onCancel:()=>void,onConfirm
 {
     const [deleteEmployee, {data,isSuccess}] = useDeleteEmployeeMutation();
     
-    async function handleConfirm()
-    {
-        await deleteEmployee(id);
-        useEffect(()=>{
+    useEffect(()=>{
         if(isSuccess)
         {
             onConfirmDelete();
         }
     },[isSuccess])
+    
+    async function handleConfirm()
+    {
+        await deleteEmployee(id);
+
     }
   
     return(
@@ -22,10 +24,10 @@ function DeleteDialog({onCancel,onConfirmDelete,id}:{onCancel:()=>void,onConfirm
             <h3>Are you sure?</h3>
             <p>Do you really want to delete employee?</p>
             <div className="del_button_div">
-                <button id="cancel_btn" onClick={(e)=>{e.stopPropagation(); console.log("cancel clikced"); onCancel();}}>
+                <button id="cancel_btn" name="cancel" onClick={(e)=>{e.stopPropagation(); console.log("cancel clikced"); onCancel();}}>
                     Cancel
                 </button>
-                <button id="confirm_btn" onClick={handleConfirm}>Confirm</button>
+                <button id="confirm_btn" name="confirm" onClick={handleConfirm}>Confirm</button>
             </div>
         </div>
     )

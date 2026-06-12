@@ -1,5 +1,5 @@
-import Navbar from "./navbar";
-import Aside from "./aside";
+import Navbar from "./Navbar";
+import Aside from "./Aside";
 import chatIcon from "../assets/chat_icon.png"
 import "/create_employee.css"
 import { Outlet } from "react-router";

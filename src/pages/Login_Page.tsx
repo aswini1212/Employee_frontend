@@ -1,10 +1,11 @@
-import Image from "../components/image";
+import Image from "../components/Image";
 import "/Login.css";
 import KVLogo from "../assets/keyvalue_logo.png";
 import FrameImage from "../assets/Frame1.png";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { useLoginMutation } from "../api_service/auth/login.api";
+import Button from "../components/Button";
 
 function Login() {
   const [login] = useLoginMutation();
@@ -22,9 +23,15 @@ function Login() {
       username: username,
       password: password,
     });
-    const response = await login(params);
-    localStorage.setItem("token", response.data.access_token);
-    navigate("/employee/list");
+    try{
+      const response = await login(params);
+      localStorage.setItem("token", response.data.access_token);
+      navigate("/employee/list");
+    }
+    catch(error)
+    {
+      console.log(error)
+    }
   }
 
   function handleUsername(value: string) {
@@ -69,9 +76,10 @@ function Login() {
                 className="username"
                 onChange={(e) => handleUsername(e.target.value)}
                 ref={ref}
+        
               />
               {usernameError && (
-                <p className="validation_para">{usernameError}</p>
+                <p className="validation_para" data-testid={1}>{usernameError}</p>
               )}
 
               <input
@@ -82,12 +90,10 @@ function Login() {
                 onChange={(e) => handlePassword(e.target.value)}
               />
               {passwordError && (
-                <p className="validation_para">{passwordError}</p>
+                <p className="validation_para" data-testid={2}>{passwordError}</p>
               )}
 
-              <button type="submit" id="login-button">
-                Login
-              </button>
+              <button type="submit" id="login-button" name="login">Login</button>
             </form>
           </div>
         </div>

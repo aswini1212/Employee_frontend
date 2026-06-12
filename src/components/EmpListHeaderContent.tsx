@@ -2,9 +2,9 @@ import "/employee_list.css"
 import DeleteIcon from "../assets/delete_icon.png"
 import ModifyIcon from "../assets/pencil_icon.png"
 import { useState } from "react";
-import DeleteDialog from "./delete_dialog";
+import DeleteDialog from "./DeleteDialog";
 import { useNavigate } from "react-router-dom";
-import type {ResponseType} from "../../src/api_service/employees/employees.api"
+import type {ResponseType} from "../api_service/employees/employees.api"
 
 function EmpListHeaderContent({employee, onClick}:{employee:ResponseType, onClick: (id: number) => void})
 {

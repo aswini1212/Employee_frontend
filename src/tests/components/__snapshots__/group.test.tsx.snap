@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Group component rendered with provided name > Group should match snapshot 1`] = `
+<div>
+  <div
+    class="group1"
+    data-testid="group"
+  >
+    <label
+      for="test-group"
+    >
+      test-group
+    </label>
+    <input
+      id="test-group"
+      name="test-group"
+      placeholder="test-group"
+      type="text"
+    />
+  </div>
+</div>
+`;

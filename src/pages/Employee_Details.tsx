@@ -1,4 +1,4 @@
-import LabelGroup from "../components/label_group";
+import LabelGroup from "../components/LabelGroup";
 import editIcon from "../assets/edit_icon.png"
 import "/employee_details.css"
 import { useNavigate, useParams } from "react-router";

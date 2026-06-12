@@ -1,4 +1,4 @@
-function Button(props:{type:"submit" | "reset" | "button" | undefined, label:string, id?: string })
+function Button(props:{type:"submit" | "reset" | "button" | undefined, label?:string, id?: string })
 {
     
     return(
